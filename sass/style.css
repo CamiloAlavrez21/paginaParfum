@@ -48,36 +48,47 @@ header li img {
 }
 
 section {
-  background-color: #E7C6A5;
-  border-radius: 20px;
   margin-top: 30px;
-  width: 98%;
   display: flex;
   justify-content: space-around;
   border: 5px solid black;
+  background-color: #E7C6A5;
+  width: none;
+  border-radius: 20px;
+  display: flex;
+  font-family: "Courgette", cursive;
 }
 
 section img {
-  width: 150px;
   height: 160px;
-  border-radius: 50%;
   margin: 30px;
   border: 5px solid brown;
+  background-color: none;
+  width: 150px;
+  border-radius: 50%;
+  display: flex;
+  font-family: "Courgette", cursive;
 }
 
 section h1 {
   font-size: 30px;
-  display: flex;
   justify-content: center;
+  background-color: none;
+  width: none;
+  border-radius: none;
+  display: flex;
+  font-family: "Courgette", cursive;
 }
 
 section p {
-  font-family: "Courgette", cursive;
   font-size: 20px;
-  width: 50%;
   margin-left: 350px;
-  display: flex;
   justify-content: center;
+  background-color: none;
+  width: 50%;
+  border-radius: none;
+  display: flex;
+  font-family: "Courgette", cursive;
 }
 
 .contenedor2 {
@@ -189,73 +200,72 @@ aside th {
 }
 
 .contenedor3 {
+  display: flex;
+  justify-content: center;
   border: 5px solid black;
   margin-top: 20px;
   width: 97%;
   height: 600px;
   background-color: #b68a5d;
   border-radius: 20px;
-  display: flex;
   padding: 20px;
   font-family: "Courgette", cursive;
 }
 
 .contenedor3 h1 {
-  justify-content: center;
   background-color: none;
   border-radius: none;
-  display: flex;
   padding: none;
   font-family: "Courgette", cursive;
 }
 
 .contenedor3 div {
+  display: flex;
   justify-content: center;
   background-color: none;
   border-radius: none;
-  display: flex;
   padding: none;
   font-family: "Courgette", cursive;
 }
 
 .contenedor ul {
+  gap: 30px;
+  display: flex;
   background-color: none;
   border-radius: none;
-  display: flex;
   padding: 5px;
   font-family: "Courgette", cursive;
-  gap: 30px;
 }
 
 .contenedor3 li {
+  display: flex;
   border: 5px solid black;
   background-color: #F4E1D2;
-  border-radius: 20px;
-  display: flex;
+  border-radius: 50%;
   padding: none;
   font-family: "Courgette", cursive;
 }
 
 .contenedor3 img {
+  display: flex;
   justify-content: space-around;
   width: 300px;
   height: 300px;
   background-color: none;
   border-radius: 50%;
-  display: flex;
   padding: none;
   font-family: "Courgette", cursive;
 }
 
 .contenedor3 p {
-  width: 650px;
+  width: 250px;
   border: 5px solid black;
   margin-left: 40px;
+  display: flex;
   justify-content: space-around;
   font-size: 18px;
   background-color: #d2b88e;
   border-radius: 20px;
-  display: flex;
   padding: 10px;
   font-family: "Courgette", cursive;
 }
