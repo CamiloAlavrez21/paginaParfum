@@ -187,15 +187,14 @@ aside th {
 }
 
 .baner {
-  display: flex;
   justify-content: center;
+  display: flex;
   border: 5px solid black;
-  background-color: rgb(235, 239, 236);
   border-radius: 20px;
+  background-color: rgb(235, 239, 236);
 }
 
 .baner img {
-  border-radius: 20px;
   width: 98%;
 }
 
@@ -213,10 +212,8 @@ aside th {
 }
 
 .contenedor3 h1 {
-  background-color: none;
-  border-radius: none;
-  padding: none;
-  font-family: "Courgette", cursive;
+  display: flex;
+  justify-content: center;
 }
 
 .contenedor3 div {
@@ -272,13 +269,13 @@ aside th {
 
 footer {
   margin-top: 10px;
-  padding: 20px;
   width: 97%;
-  background-color: #d2b88e;
   border-radius: 20px;
   border: 5px solid black;
-  display: flex;
   justify-content: space-around;
+  display: flex;
+  padding: 20px;
+  background-color: #d2b88e;
 }
 
 footer h1 {
@@ -294,8 +291,8 @@ footer ul {
 
 footer li {
   display: flex;
-  background-color: #d2b88e;
   padding: 5px;
+  background-color: #d2b88e;
 }
 
 footer img {

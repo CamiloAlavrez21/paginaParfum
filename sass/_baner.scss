@@ -1,12 +1,15 @@
-.baner {
-    display: flex;
-    justify-content: center;
-    border: 5px solid black;
-    background-color: rgb(235, 239, 236);
+@mixin baner($display,$border,$color){
+    display: $display;
+    border: $border;
     border-radius: 20px;
+    background-color: $color;
+}
+
+.baner {
+    justify-content: center;
+    @include baner(flex, 5px solid black,rgb(235, 239, 236));
 }
 
 .baner img {
-    border-radius: 20px;
     width: 98%;
 }

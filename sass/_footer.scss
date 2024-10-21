@@ -1,12 +1,16 @@
+@mixin footer($display,$pading,$color){
+    display: $display;
+    padding: $pading;
+    background-color: $color
+}
+
 footer {
     margin-top: 10px;
-    padding: 20px;
     width: 97%;
-    background-color: #d2b88e;
     border-radius: 20px;
     border: 5px solid black;
-    display: flex;
     justify-content: space-around;
+    @include footer(flex,20px ,#d2b88e);
 }
 
 footer h1 {
@@ -21,9 +25,7 @@ footer ul {
 }
 
 footer li {
-    display: flex;
-    background-color: #d2b88e;
-    padding: 5px;
+    @include footer(flex, 5px, #d2b88e);
 }
 
 footer img {

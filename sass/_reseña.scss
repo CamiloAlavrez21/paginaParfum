@@ -17,8 +17,8 @@
 }
 
 .contenedor3 h1 {
-    
-    @include Reseña(none,none,none);
+    display: flex;
+    justify-content: center;
 }
 
 .contenedor3 div {
