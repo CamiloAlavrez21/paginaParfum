@@ -1,0 +1,32 @@
+footer {
+    margin-top: 10px;
+    padding: 20px;
+    width: 97%;
+    background-color: #d2b88e;
+    border-radius: 20px;
+    border: 5px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer h1 {
+    font-size: 50px;
+}
+
+footer ul {
+    padding: 5px;
+    display: flex;
+    margin: 0;
+    gap: 30px;
+}
+
+footer li {
+    display: flex;
+    background-color: #d2b88e;
+    padding: 5px;
+}
+
+footer img {
+    width: 70px;
+    height: 70px;
+}

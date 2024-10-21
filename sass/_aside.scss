@@ -1,0 +1,32 @@
+/*      ASIDE       */
+aside {
+    background-color: #e2c5a6;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 450px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 5px solid black;
+}
+
+aside table {
+    display: flex;
+    justify-content: center;
+}
+
+aside h1 {
+    font-family: 'Courgette', cursive;
+    display: flex;
+    justify-content: center;
+}
+
+aside p {
+    display: flex;
+    justify-content: none;
+}
+
+aside th {
+    padding: 10px;
+}
