@@ -1,0 +1,19 @@
+body{
+    background-color: #af4747;
+    border-radius: 20px;
+}
+
+/*Navegador Nuevo*/
+.nav{
+    background-color: gray;
+    border-radius: 10px;
+}
+.nav-item{
+    
+}
+
+/*Formulario*/
+form{
+    border-radius: 20px;
+    padding-top: 10px;
+}
