@@ -10,7 +10,7 @@
 </head>
 <body>
     <!--    Navegador   -->
-    <div class="container-fluid">
+    
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Social de Parfum</a>
@@ -33,11 +33,10 @@
                 </div>
             </div>
         </nav>
-    </div>
     <!--    Baner   -->
 
-    <div class="container-fluid">
-        <img src="../imagenes/parfum banner.jpeg" class="img-fluid" alt="...">
+    <div class="contenedorbaner">
+        <img src="../imagenes/parfum banner.jpeg" class="img-fluid" alt="..">
     </div>
 
     <!--TABLAS-->
@@ -48,10 +47,12 @@
                 <div class="col-2">
                     <img src="../imagenes/Perfume Logo.jpg" class="img-thumbnail" alt="...">
                 </div>
-                <div class="col-10">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi vel deserunt aliquid atque in et
-                        architecto repudiandae repellendus corporis autem voluptates itaque sapiente repellat tempora, quasi
-                        aperiam quaerat eos quia!</p>
+                <div class="col-8">
+                    <p>¡Bienvenido a la comunidad de perfumería, Social de Parfum! Aquí buscamos que los apasionados por los perfumes
+                    interactúen, compartan sus experiencias y aprendan juntos. Nuestra misión es crear un espacio donde puedas descubrir
+                    nuevas fragancias, conectar con otros entusiastas y disfrutar del arte de los perfumes. Además, queremos promover la
+                    página para que crezca y llegue a más personas que, como tú, valoran el mundo de las esencias. ¡Gracias por ser parte de
+                    esta experiencia fragante y única!</p>
                 </div>
             </div>
         </div>
@@ -114,8 +115,10 @@
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
-                            <div class="col-2">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eveniet quas cumque, sit assumenda temporibus, corporis minus dolorem ea est eos sapiente facilis neque modi, vel rem dolorum autem blanditiis?</p>
+                            <div class="col-4">
+                                <p class="textovideo">Los mejores perfumes masculinos son fragancias destacadas por su calidad y popularidad. Se clasifican por notas
+                                olfativas y duración, abarcando desde frescas hasta amaderadas. Fragancias como Dior Sauvage y Bleu de Chanel
+                                son icónicas y reconocidas por su atractivo y complejidad.</p>
                             </div>
                         </div>
                         <div class="row">
@@ -149,16 +152,16 @@
                                         <td>La Nuit de L'Homme</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">3</th>
-                                        <td>Invictus</td>
-                                        <td>Allure Homme Sport</td>
-                                        <td>La Nuit de L'Homme</td>
+                                        <th scope="row">4</th>
+                                        <td>Fahrenheit</td>
+                                        <td>Terre d'Hermès</td>
+                                        <td>Montblanc Explorer</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">3</th>
-                                        <td>Invictus</td>
-                                        <td>Allure Homme Sport</td>
-                                        <td>La Nuit de L'Homme</td>
+                                        <th scope="row">5</th>
+                                        <td>Giorgio Armani Code</td>
+                                        <td>Tom Ford Noir</td>
+                                        <td>Yves Saint Laurent Kouros</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -182,19 +185,22 @@
                             <div class="carousel-item active">
                                 <img src="../imagenes/jean_paul_2.webp" class="d-block w-100" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
+                                    <p class="carousel-description">"Le Beau Le Parfum" de Jean Paul Gaultier es una fragancia seductora que combina frescura y dulzura exótica. Con notas de salida de bergamota, un corazón de coco y haba tonka, y un fondo de sándalo y ámbar, esta fragancia es intensa pero equilibrada. Ideal para el día o la noche, su esencia evoca una seducción tropical y sofisticada.</p>
                                     <h5>Le Beau Le Parfum</h5>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="../imagenes/EspPerf_Chanel.jpg" class="d-block w-100" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>Blue de Chanel</h5>
+                                    <p class="carousel-description">Bleu de Chanel es una fragancia masculina sofisticada y versátil lanzada por Chanel. Su aroma combina notas frescas de cítricos, como el limón y la toronja, con toques amaderados de cedro y vetiver, ofreciendo un equilibrio entre frescura y profundidad. También incluye un fondo de incienso y jengibre que añade calidez y elegancia.Es una opción ideal para cualquier ocasión, ya que su carácter moderno y refinado lo hace adecuado tanto para el día como para la noche.</p>
+                                    <h5>Bleu de Chanel</h5>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="../imagenes/dior savage.webp" class="d-block w-100" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>Blue de Chanel</h5>
+                                    <p class="carousel-description">"Dior Sauvage Parfum" es una fragancia sofisticada que combina frescura intensa de bergamota con calidez amaderada de sándalo y un fondo de incienso y vainilla. Ideal para ocasiones especiales, proyecta fuerza y misterio en un equilibrio elegante y envolvente.</p>
+                                    <h5>Dior Savage Parfum</h5>
                                 </div>
                             </div>
                         </div>
@@ -223,6 +229,13 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
 
 
 
@@ -371,8 +384,3 @@
         <h2>@2024Social de Parfum</h2>
     </div>
     -->
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"crossorigin="anonymous"></script>
-</body>
-</html>
