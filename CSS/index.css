@@ -18,13 +18,13 @@
 }
 
 #carouselExampleCaptions {
-    width: 500px;
+    width: 450px;
     height: 600px;
     overflow: hidden;
 }
 
 .carousel-item img {
-    width: 500px;
+    width: 450px;
     height: 600px;
     object-fit: cover;
     /* Ajusta la imagen para llenar el contenedor sin distorsionarse */
