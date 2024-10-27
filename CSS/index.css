@@ -1,7 +1,54 @@
+.container-fluid{
+    border: 1px solid black;
+}
+
+.col-2{
+    background-color: #fafafa;
+}
+.col-2 img{
+    border-radius: 50%;
+}
+.col-8{
+    background-color: #fafafa;
+}
+.col-8 p{
+    display: grid;
+    justify-content: center;
+    text-justify: auto;
+}
+
+#carouselExampleCaptions {
+    width: 500px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+    /* Ajusta la imagen para llenar el contenedor sin distorsionarse */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 body{
     background-color:#F4E1D2;
 }
-/*      NUEVO ENCABEZADO DE PAGINA     #b3825c */
+
 .contenedor{
     background-color: rgb(235, 217, 180);
     width: 99%;
@@ -37,7 +84,7 @@ header li img{
     border-radius: 50%;
     border: 5px solid black;
 }
-/*      NUEVO SELECOTR      */
+
 section{
     background-color: #E7C6A5;
     width: 98%;
@@ -74,7 +121,7 @@ section p{
     justify-content: space-evenly;
     font-family: 'Courgette', cursive;
 }
-/*      ARTICULO        */
+
 article{
     width: 500px;
     height: 450px;
@@ -123,7 +170,7 @@ article img{
     border: 5px solid black;
     border-radius: 20px;
 }
-/*      ASIDE       */
+
 aside{
     background-color: #e2c5a6;
     display: flex;
@@ -172,7 +219,7 @@ aside th{
     50%{margin-left: -200%;}
     100%{margin-left: -300%;}
 }
-/*      RElleno     */
+
 .contenedor3{
     background-color: #b68a5d;
     width: 97%;
@@ -222,7 +269,7 @@ aside th{
     font-size: 18px;
     padding: 10px;
 }
-/*  FOTER   */
+
 footer{
     margin-top: 10px;
     padding: 20px;
@@ -315,3 +362,4 @@ footer img{
     justify-content: center;
     margin-top: 20px;
 }
+*/

@@ -1,19 +1,31 @@
 body{
-    background-color: #af4747;
-    border-radius: 20px;
+    padding: 15px;
 }
 
-/*Navegador Nuevo*/
-.nav{
-    background-color: gray;
-    border-radius: 10px;
-}
-.nav-item{
-    
+.navbar{
+    border-radius: 20px;
+    font-size: 25px;
 }
 
-/*Formulario*/
-form{
-    border-radius: 20px;
+
+/*      Carusel     */
+.carousel{
     padding-top: 10px;
+}
+.carousel-inner{
+    border-radius: 20px;
+}
+.carousel-caption h5{
+    color: black;
+}
+.carousel-caption p{
+    color: black;
+}
+
+/*      Login     */
+
+form{
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
 }
