@@ -45,6 +45,10 @@ section p{
     height: 200px;
     border-radius: 50%;
     border:5px solid #8B867C;
+    transition: transform 0.5s ease;
+}
+.col-2 img:hover{
+    transform: rotate(360deg);
 }
 
 /*  section 2  */
@@ -135,6 +139,37 @@ table{
 
 #carouselExampleCaptions:hover .carousel-description {
     opacity: 1;
+}
+/*  reseña  */
+.container2{
+    margin-top: 20px;
+    border: 5px solid #8B867C;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: #CAB7FF;
+}
+.container2 h1{
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    padding-top: 100px;
+    padding-left: 50px;
+}
+.notas{
+    display: grid;
+    justify-content: center;
+    padding-top: 20px;
+}
+.notas h2{
+    padding-left: 60px;
+}
+.notas img{
+    border: 5px solid #8B867C;
+    border-radius: 20px;
+}
+.recomendacion{
+    padding-top: 40px;
 }
 
 /*Footer*/
