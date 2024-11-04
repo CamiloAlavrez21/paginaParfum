@@ -76,11 +76,13 @@ body {
     transition: opacity 0.3s ease;
 }
 
-/* Al pasar el ratón sobre el carousel-item, se muestra el párrafo */
 .carousel-item:hover .carousel-description {
     opacity: 1;
 }
-
+/*  Tabla   */
+.list-group-item-1{
+    background-color: #6a0dad !important;
+}
 /*  Botones     */
 .col{
     padding-top: 20px;
@@ -91,13 +93,16 @@ body {
     height: 50px;
 }
 
+
 .btn-primary {
+    background-color: #6a0dad !important;
+    border-color: #6a0dad !important;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     
 }
 
 .btn-primary:hover {
-    box-shadow: 0 0 20px cyan;
+    box-shadow: 0 0 20px #a25cd4;
     transform: scale(1.05);
 }
 
