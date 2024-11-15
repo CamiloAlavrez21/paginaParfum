@@ -1,0 +1,367 @@
+<?php
+include("conexion.php");
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi pagina</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <!--    Navegador   -->
+    
+        <nav class="navbar navbar-expand-lg navbar-custom">
+                <a class="navbar-brand" href="#">Social de Parfum</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/HTML/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Login -->
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Logeo de Cuenta</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-flui">
+                                                <h3>!Inicia Secion para poder participar en nuestra comunidad!</h3>
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">Usuario</label>
+                                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary">enviar</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">salir</button>
+                                            <a href="http://localhost/pagina-personal/PHP/registro.php"><button type="button" class="btn btn-primary">Crear Cuenta</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Panel de control</a>
+                        </li>
+                    </ul>
+                </div>
+
+        </nav>
+    <!--    Baner   -->
+
+    <div class="contenedorbaner">
+        <img src="../imagenes/parfum banner.jpeg" class="img-fluid" alt="..">
+    </div>
+
+    <!--Section-->
+    <section>
+        <div class="container-fluid">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="../imagenes/Perfume Logo.jpg" class="img-thumbnail" alt="...">
+                    </div>
+                    <div class="col-8">
+                        <p>¡Bienvenido a la comunidad de perfumería, Social de Parfum! Aquí buscamos que los apasionados por los perfumes
+                        interactúen, compartan sus experiencias y aprendan juntos. Nuestra misión es crear un espacio donde puedas descubrir
+                        nuevas fragancias, conectar con otros entusiastas y disfrutar del arte de los perfumes. Además, queremos promover la
+                        página para que crezca y llegue a más personas que, como tú, valoran el mundo de las esencias. ¡Gracias por ser parte de
+                        esta experiencia fragante y única!</p>
+                    </div>
+                    <div class="col-2">
+                        <img src="../imagenes/Comunidad.jpg" class="img-thumbnail" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Section-->
+    <section>
+        <div class="container-fluid">
+            <div class="container text-center">
+                <h2>Consejos para aprovechar tus perfumes</h2>
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../imagenes/161076041_244093347410090_3468674311695570138_n.jpg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Aplicacion de perfume </h5>
+                                <p class="card-text">La elección de los lugares de aplicación del perfume es fundamental, ya que puede influir significativamente en la duración de la fragancia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../imagenes/piramide_olfativa.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Piramide olfativa</h5>
+                                <p class="card-text">La pirámide olfativa en los perfumes es esencial, ya que determina cómo se desarrolla y evoluciona la fragancia a lo largo del tiempo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../imagenes/ph.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">importancia del Ph</h5>
+                                <p class="card-text">El pH en los perfumes es un factor crucial, ya que influye en la estabilidad y la proyección de la fragancia, así como en su interacción con la piel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../imagenes/perfumesdiferencia.webp" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Concentracion de perfume</h5>
+                                <p class="card-text">La concentración de un perfume afecta la intensidad y duración.Un mayor porcentaje de concentración implica mayor persistencia y proyección.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--article-->
+    <article>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-8">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-8">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/2_BGum2N5Cs?si=DVrOrEcCCSDv2T_y"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="col-4">
+                                <p class="textovideo">Los mejores perfumes masculinos son fragancias destacadas por su calidad y popularidad. Se clasifican por notas
+                                olfativas y duración, abarcando desde frescas hasta amaderadas. Fragancias como Dior Sauvage y Bleu de Chanel
+                                son icónicas y reconocidas por su atractivo y complejidad.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <table class="table">
+                                <h2>Rancking de los mejores perfumes masculinos </h2>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Puesto</th>
+                                        <th scope="col">Fresco</th>
+                                        <th scope="col">Versatil</th>
+                                        <th scope="col">Para citas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="n1">
+                                        <th scope="row">1</th>
+                                        <td>Le Beau Le Barfum</td>
+                                        <td>Blue de Chanel</td>
+                                        <td>Dior Sauvage Parfum</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Acqua Di Gio Profondo</td>
+                                        <td>Dior Homme Cologne</td>
+                                        <td>Valentino Uomo Intense</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Invictus</td>
+                                        <td>Allure Homme Sport</td>
+                                        <td>La Nuit de L'Homme</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Fahrenheit</td>
+                                        <td>Terre d'Hermès</td>
+                                        <td>Montblanc Explorer</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Giorgio Armani Code</td>
+                                        <td>Tom Ford Noir</td>
+                                        <td>Yves Saint Laurent Kouros</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Carusel-->
+                <div class="col-4">
+                    <h2>Ganadores del Rancking</h2>
+                    <div id="carouselExampleCaptions" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../imagenes/jean_paul_2.webp" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p class="carousel-description">"Le Beau Le Parfum" de Jean Paul Gaultier es una fragancia seductora que combina frescura y dulzura exótica. Con notas de salida de bergamota, un corazón de coco y haba tonka, y un fondo de sándalo y ámbar, esta fragancia es intensa pero equilibrada. Ideal para el día o la noche, su esencia evoca una seducción tropical y sofisticada.</p>
+                                    <h5>Le Beau Le Parfum</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../imagenes/EspPerf_Chanel.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p class="carousel-description">Bleu de Chanel es una fragancia masculina sofisticada y versátil lanzada por Chanel. Su aroma combina notas frescas de cítricos, como el limón y la toronja, con toques amaderados de cedro y vetiver, ofreciendo un equilibrio entre frescura y profundidad. También incluye un fondo de incienso y jengibre que añade calidez y elegancia.Es una opción ideal para cualquier ocasión, ya que su carácter moderno y refinado lo hace adecuado tanto para el día como para la noche.</p>
+                                    <h5>Bleu de Chanel</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../imagenes/dior savage.webp" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p class="carousel-description">"Dior Sauvage Parfum" es una fragancia sofisticada que combina frescura intensa de bergamota con calidez amaderada de sándalo y un fondo de incienso y vainilla. Ideal para ocasiones especiales, proyecta fuerza y misterio en un equilibrio elegante y envolvente.</p>
+                                    <h5>Dior Savage Parfum</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+        <div class="container2">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Reseña del Semana</h1>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="../imagenes/Phantom.webp" class="card-img-top" alt="...">
+                    
+                        <div class="card-body">
+                            <h5 class="card-title">Phantom EDT</h5>
+                            <p class="card-text">Phantom EDT de Paco Rabanne es una fragancia fresca y atrevida, con notas de lavanda, vainilla y vetiver. Su aroma
+                            vibrante y su frasco en forma de robot lo hacen ideal para quienes buscan un toque moderno y juvenil.</p>
+                            <a href="https://www.eliteperfumes.cl/products/phantom-edt-100-ml-h" class="btn btn-primary">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="logo">
+                        <img src="../imagenes/logopacoraban.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="notas">
+                        <h2>Notas del perfumes</h2>
+                        <img src="../imagenes/Captura de pantalla 2024-10-27 230404.png" alt="">
+                    </div>
+                    <div class="recomendacion">
+                        <h1>Estacion del año recomendada</h1>
+                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-bar text-bg-primary" style="width: 80%">Invierno</div>
+                        </div>
+                    
+                        <div class="progress" role="progressbar" aria-label="Info striped example" aria-valuenow="75" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-bar text-bg-success" style="width: 100%">Primavera</div>
+                        </div>
+                    
+                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-bar text-bg-warning" style="width:55%">Verano</div>
+                        </div>
+                    
+                        <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-bar text-bg-secondary"style="width:95%">Otoño</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    Footer   -->
+    
+    <div class="grid-container3">
+        <footer>
+            <div class="footer-texto">
+                <div>
+                    <h3>Terminos</h3>
+                    <p>Política de privacidad</p>
+                    <p>Termino y Condiciones</p>
+                    <p>Etica de la sociedad</p>
+                </div>
+                <div>
+                    <h3>Influencers</h3>
+                    <p>Mr.ross</p>
+                    <p>El Güey de los Perfumes</p>
+                    <p>Luisito Comunica</p>
+                </div>
+                <div>
+                    <h3>Perfumerias</h3>
+                    <p>Elite Perfumes</p>
+                    <p>Alisha Perfumes</p>
+                    <p>Skills Perfumes</p>
+                </div>
+                <div class="redes-sociales">
+                    <h3>Redes sociales</h3>
+                    <a href="#"><img src="../imagenes/whatsapp.svg" alt="WhatsApp"></a>
+                    <a href="#"><img src="../imagenes/instagram.svg" alt="Facebook"></a>
+                    <a href="#"><img src="../imagenes/facebook.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="grid-container4">
+        <div class="footer-copy">
+            <p>&copy; 2024 Social de Parfum</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
