@@ -161,29 +161,37 @@
 
                     <!--BOTON DE ELIMINAR-->
                     <th>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
+                    <!-- Botón para abrir el modal -->
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar<?php echo $row['id']; ?>">
                         Eliminar
-                        </button>
+                    </button>
 
-                        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content custom-modal-2">
+                    <!-- Modal para confirmar la eliminación -->
+                    <div class="modal fade" id="modalEliminar<?php echo $row['id']; ?>" tabindex="-1" aria-labelledby="modalLabel<?php echo $row['id']; ?>" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="modal2Label">Eliminar Usuario</h1>
+                                    <h1 class="modal-title fs-5" id="modalLabel<?php echo $row['id']; ?>">Eliminar Usuario</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    ¿Esta seguro que desea eliminar a este usuario?
+                                    <!-- Mensaje de confirmación con la ID del usuario -->
+                                    ¿Está seguro que desea eliminar al usuario con ID <strong><?php echo $row['id']; ?></strong>?
                                 </div>
-                                <form action="eliminar.php" method="POST">
-                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                    <button type="submit" class="btn btn-danger">Eliminar</button>
-                                </form>
+                                <div class="modal-footer">
+                                    <!-- Formulario para enviar la ID al archivo eliminar.php -->
+                                    <form action="eliminar.php" method="POST">
+                                        <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <a href="eliminar.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+                                            </tr>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                    </th>                                                                        
+                    </div>
+                </th>
+
                 </tr>
                 <?php 
                     }
