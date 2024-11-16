@@ -1,5 +1,11 @@
-<?php
-include("conexion.php");
+
+<?php 
+    include("conexion.php");
+    $con=conectarbd();
+
+    $sql="SELECT *  FROM clientes";
+    $query=mysqli_query($con,$sql);
+
 
 ?>
 
@@ -72,10 +78,124 @@ include("conexion.php");
                     </ul>
                 </div>
         </nav>
-    <!--    Panel de control    -->
-    <div class="container-fluid">
-        
+    
+    <!--BOTONAgregar-->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Agregar
+    </button>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar nuevo usuario</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="insertar.php" method="POST">
+                <input type="text" class="form-control mb-3" name="nombre" placeholder="nombre">
+                <input type="text" class="form-control mb-3" name="apellido" placeholder="apellido">
+                <input type="text" class="form-control mb-3" name="nom_usuario" placeholder="nom_usuario">
+
+                <input type="submit" class="btn btn-primary">
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+        </div>
+    </div>
     </div>
 
+
+    <!--    Panel de control    -->
+    <div class="container-fluid">
+        <table class="table" action="insertar.php" method="POST">
+            <thead class="table-success table-striped" >
+                <tr>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>apellido</th>
+                    <th>nombre de usuario</th>
+                    <th></th>
+                    <th></th>                 
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php
+                    while($row=mysqli_fetch_array($query)){
+                ?>
+                <tr>
+                    <th><?php  echo $row['id']?></th>
+                    <th><?php  echo $row['nombre']?></th>
+                    <th><?php  echo $row['apellido']?></th>
+                    <th><?php  echo $row['nom_usuario']?></th>    
+
+                    <!--BOTON DE MODIFICAR-->
+                    <th>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">
+                        Modificar
+                        </button>
+
+                        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content custom-modal-2">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="modal2Label">Modificar usuario</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-primary">Guardar</button>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </th>
+
+
+                    <!--BOTON DE ELIMINAR-->
+                    <th>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
+                        Eliminar
+                        </button>
+
+                        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content custom-modal-2">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="modal2Label">Eliminar Usuario</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ¿Esta seguro que desea eliminar a este usuario?
+                                </div>
+                                <form action="eliminar.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                </form>
+                            </div>
+                        </div>
+                        </div>
+                    </th>                                                                        
+                </tr>
+                <?php 
+                    }
+                ?>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 </html>

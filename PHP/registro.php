@@ -37,12 +37,11 @@ include("conexion.php");
         </div>
     
     </nav>
-    <!--baner-->
-    
+
     <!--Formulario de registro-->
     <div class="container">
         
-        <form class="row g-3"> 
+        <form action="insertar.php" class="row g-3"> 
             <button type="button" class="btn btn-primary">Registro</button>
             <div class="col-md-6">
                 <label for="validationDefault01" class="form-label">Nombre</label>

@@ -1,16 +1,15 @@
 <?php
+function conectarbd(){
+    $host="localhost";
+    $user="root";
+    $pass="";
 
-$server="localhost";
-$user="root";
-$pass="";
-$bd="tester";
+    $bd="intento1";
 
-$conexion=new mysqli($server,$user,$pass,$bd);
-if($conexion->connect_errno){
-    die("La conexion ha fallado" . $conexion->connect_errno);
+    $con=mysqli_connect($host,$user,$pass);
+
+    mysqli_select_db($con,$bd);
+
+    return $con;
 }
-else{
-    echo "conectado";
-}
-
 ?>
