@@ -9,7 +9,7 @@ $sql="DELETE FROM usuarios  WHERE id='$id'";
 $query=mysqli_query($con,$sql);
 
 if($query){
-   Header("Location: panel_control.php");
+   Header("Location: panel_control.php?success=3");
 }
 ?>
 

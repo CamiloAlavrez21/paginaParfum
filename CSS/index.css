@@ -120,9 +120,12 @@ article iframe{
     font-family: 'Playfair Display', serif;
 }
 table{
-    border: 5px solid;
+    border: 5px solid #5A4E43;
+    
 }
-
+.table thead{
+    background-color: #6a0dad;
+}
 .table tbody tr td {
     background-color:#CAB7FF;
 }

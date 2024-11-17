@@ -18,7 +18,7 @@ $query= mysqli_query($con,$sql);
 
 
 if($query){
-    Header("Location:panel_control.php");
+    Header("Location:panel_control.php?success=2");
 }else{
 }
 ?>

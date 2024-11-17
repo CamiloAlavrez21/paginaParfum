@@ -18,7 +18,7 @@ $query= mysqli_query($con,$sql);
 
 
 if($query){
-    Header("Location:inicio.php");
+    Header("Location:index.php");
 }else{
 }
 ?>

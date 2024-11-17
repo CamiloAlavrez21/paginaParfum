@@ -11,7 +11,7 @@
 <body>
     <!--    Navegador   -->
     
-        <nav class="navbar navbar-expand-lg navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-custom">
                 <a class="navbar-brand" href="#">Social de Parfum</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="http://localhost/pagina-personal/PHP/inicio.php">Home</a>
+                            <a class="nav-link active" aria-current="page" href="http://localhost/pagina-personal/PHP/index.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <!-- Login -->

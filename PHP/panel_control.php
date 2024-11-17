@@ -17,6 +17,29 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+
+    <!--Alerta Agregar-->
+    <?php if (isset($_GET['success']) && $_GET['success'] == 1): ?>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+          Registro exitoso.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <?php endif; ?>
+    <!--Alerta eliminar-->
+    <?php if (isset($_GET['success']) && $_GET['success'] == 3): ?>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+          Eliminacion exitosa.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <?php endif; ?>
+    <!--Alerta modificar-->
+    <?php if (isset($_GET['success']) && $_GET['success'] == 2): ?>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+          Modificacion exitosa.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <?php endif; ?>
+
     <!--    Navegador   -->
     
     <nav class="navbar navbar-expand-lg navbar-custom">
@@ -28,7 +51,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/HTML/index.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="http://localhost/pagina-personal/PHP/index.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <!-- Login -->
@@ -70,25 +93,27 @@
                             <a class="nav-link" href="#">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Panel de control</a>
+                            <a class="nav-link active" href="http://localhost/pagina-personal/PHP/panel_control.php">Panel de control</a>
                         </li>
                     </ul>
                 </div>
 
         </nav>
+    <!--BANNER-->
     <div class="contenedorbaner">
-        <img src="../imagenes/parfum banner.jpeg" class="img-fluid" alt="..">
+        <img src="../imagenes/PANEL DE CONTROL.png" class="img-fluid" alt="..">
     </div>
-        <!--BOTON DE AGREGAR-->
-<!--###############################################################################################################################-->
-    <div class="container-boton">
-        <!-- BOTÓN DE ABRIR MODAL -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Agregar
-        </button>
 
-        <!-- MODAL -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+    <!--BOTON DE AGREGAR-->
+    <div class="container-boton d-flex justify-content-between mb-3">
+    
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Agregar
+    </button>
+
+    
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -96,40 +121,39 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- FORMULARIO -->
                         <form class="row g-3" action="insertar.php" method="POST"> 
+                            
                             <div class="col-md-6">
                                 <label for="validationDefault01" class="form-label">Nombre</label>
-                                <input type="text" name="nombre" class="form-control"  value="" required>
+                                <input type="text" name="nombre" class="form-control" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label for="validationDefault02" class="form-label">Apellido</label>
-                                <input type="text" name="apellido" class="form-control" value="" required>
+                                <input type="text" name="apellido" class="form-control" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label for="validationDefault03" class="form-label">Nombre de usuario</label>
-                                <input type="text" name="usuario" class="form-control"  value="" required>
+                                <input type="text" name="usuario" class="form-control" required>
                             </div>
 
                             <div class="col-md-6">
-                                <label for="validationDefaultUsername" class="form-label">Correo</label>
+                                <label for="correo" class="form-label">Correo</label>
                                 <div class="input-group">
                                     <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                                    <input type="text" name="correo" class="form-control"  aria-describedby="inputGroupPrepend2"
-                                        required>
+                                    <input type="email" name="correo" class="form-control" required>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <label for="validationDefault04" class="form-label">Contraseña</label>
-                                <input type="password" name="contrasena" class="form-control" id="validationDefault04" required>
+                                <input type="password" name="contrasena" class="form-control" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label for="validationDefault05" class="form-label">Telefono</label>
-                                <input type="tel"  name="telefono" class="form-control" required>
+                                <input type="tel" name="telefono" class="form-control" required pattern="^\d+$" title="Solo se permiten Numeros">
                             </div>
 
                             <div class="col-md-6">
@@ -149,10 +173,10 @@
                                     </div>
                                 </div>
                             </div>
-                        
+
                             <div class="col-md-6">
                                 <label for="validationDefault07" class="form-label">Tipo de perfume</label>
-                                <select class="form-select" name="tipo_perfume" id="validationDefault07" required>
+                                <select class="form-select" name="tipo_perfume" required>
                                     <option selected disabled value=""></option>
                                     <option>Nicho</option>
                                     <option>Diseñador</option>
@@ -180,159 +204,151 @@
                 </div>
             </div>
         </div>
+
+    <!--Buscador-->
+        <form class="col-md-6" action="buscador.php" method="POST" class="mb-3">
+            <div class="input-group">
+                <input type="text" name="buscar" class="form-control" placeholder="Buscar por nombre o apellido" required>
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+        </form>
     </div>
-<!--###############################################################################################################################-->
-
-        <!--PANEL DE CONTROL-->
-<!--###############################################################################################################################-->
-    <div class="container-fluid">
-        <table class="table" action="insertar.php" method="POST">
-            <thead class="table-success table-striped" >
-                <tr>
-                    <th>id</th>
-                    <th>nombre</th>
-                    <th>apellido</th>
-                    <th>usuario</th>
-                    <th>correo</th>
-                    <th>contrasena</th>
-                    <th>telefono</th>
-                    <th>genero</th>
-                    <th>tipo de perfume</th>                 
-                    <th></th>
-                    <th></th>
-
-                </tr>
-            </thead>
-
-            <tbody>
-                <?php
-                    while($row=mysqli_fetch_array($query)){
-                ?>
-                <tr>
-                    <th><?php  echo $row['id']?></th>
-                    <th><?php  echo $row['nombre']?></th>
-                    <th><?php  echo $row['apellido']?></th>
-                    <th><?php  echo $row['usuario']?></th>
-                    <th><?php  echo $row['correo']?></th> 
-                    <th><?php  echo $row['contrasena']?></th>   
-                    <th><?php  echo $row['telefono']?></th>
-                    <th><?php  echo $row['genero']?></th>
-                    <th><?php  echo $row['tipo_perfume']?></th>
-<!--###############################################################################################################################-->
 
 
-                    <!--BOTON DE MODIFICAR-->
-<!--###############################################################################################################################-->
-                    <th>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2<?php echo $row['id']; ?>">
+    <!--PANEL DE CONTROL-->
+
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>id</th>
+                <th>nombre</th>
+                <th>apellido</th>
+                <th>usuario</th>
+                <th>correo</th>
+                <th>contrasena</th>
+                <th>telefono</th>
+                <th>genero</th>
+                <th>tipo de perfume</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                while($row = mysqli_fetch_array($query)) {
+            ?>
+            <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['nombre']; ?></td>
+                <td><?php echo $row['apellido']; ?></td>
+                <td><?php echo $row['usuario']; ?></td>
+                <td><?php echo $row['correo']; ?></td>
+                <td><?php echo $row['contrasena']; ?></td>
+                <td><?php echo $row['telefono']; ?></td>
+                <td><?php echo $row['genero']; ?></td>
+                <td><?php echo $row['tipo_perfume']; ?></td>
+
+                <!-- BOTÓN DE MODIFICAR -->
+                <td>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2<?php echo $row['id']; ?>">
                         Modificar
-                        </button>
+                    </button>
 
-                        <div class="modal fade" id="modal2<?php echo $row['id']; ?>" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+                    <div class="modal fade" id="modal2<?php echo $row['id']; ?>" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content custom-modal-2">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="modal2Label<?php echo $row['id']; ?>">Modificar usuario</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <h5>¿Está seguro que desea modificar al usuario con ID :<strong><?php echo $row['id']; ?></strong>?</h5>
-                                
-                                <!-- FORMULARIO CORREGIDO -->
-                                <form class="row g-3" action="editar.php" method="POST"> 
-                                    <!-- Campo oculto para ID -->
-                                    <input type="hidden" name="id" value="<?=$row['id'] ?>">
-
-                                    <div class="col-md-6">
-                                        <label for="validationDefault01" class="form-label">Nombre</label>
-                                        <input type="text" name="nombre" class="form-control" value="<?=$row['nombre'] ?>" required>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label for="validationDefault02" class="form-label">Apellido</label>
-                                        <input type="text" name="apellido" class="form-control" value="<?=$row['apellido'] ?>" required>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label for="validationDefault03" class="form-label">Nombre de usuario</label>
-                                        <input type="text" name="usuario" class="form-control" value="<?=$row['usuario'] ?>" required>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label for="validationDefaultUsername" class="form-label">Correo</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                                            <input type="text" name="correo" class="form-control" value="<?=$row['correo'] ?>" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label for="validationDefault04" class="form-label">Contraseña</label>
-                                        <input type="password" name="contrasena" class="form-control" value="<?=$row['contrasena'] ?>" required>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label for="validationDefault05" class="form-label">Teléfono</label>
-                                        <input type="tel" name="telefono" class="form-control" value="<?=$row['telefono'] ?>" required>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label for="validationDefault06" class="form-label">Género</label>
-                                        <div class="radio-container">
-                                            <div class="radio-item">
-                                                <input id="masculino" type="radio" name="genero" value="Masculino" 
-                                                    <?= $row['genero'] === 'Masculino' ? 'checked' : '' ?>>
-                                                <label for="masculino">Masculino</label>
-                                            </div>
-                                            <div class="radio-item">
-                                                <input id="femenino" type="radio" name="genero" value="Femenino" 
-                                                    <?= $row['genero'] === 'Femenino' ? 'checked' : '' ?>>
-                                                <label for="femenino">Femenino</label>
-                                            </div>
-                                            <div class="radio-item">
-                                                <input id="nobinario" type="radio" name="genero" value="No binario" 
-                                                    <?= $row['genero'] === 'No binario' ? 'checked' : '' ?>>
-                                                <label for="nobinario">No binario</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label for="validationDefault07" class="form-label">Tipo de perfume</label>
-                                        <select class="form-select" name="tipo_perfume" id="validationDefault07" required>
-                                            <option disabled>Seleccionar...</option>
-                                            <option value="Nicho" <?= $row['tipo_perfume'] === 'Nicho' ? 'selected' : '' ?>>Nicho</option>
-                                            <option value="Diseñador" <?= $row['tipo_perfume'] === 'Diseñador' ? 'selected' : '' ?>>Diseñador</option>
-                                            <option value="Árabe" <?= $row['tipo_perfume'] === 'Árabe' ? 'selected' : '' ?>>Árabe</option>
-                                            <option value="Catálogo" <?= $row['tipo_perfume'] === 'Catálogo' ? 'selected' : '' ?>>Catálogo</option>
-                                        </select>
-                                    </div>
-
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="modal2Label<?php echo $row['id']; ?>">Modificar usuario</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>¿Está seguro que desea modificar al usuario con ID :<strong><?php echo $row['id']; ?></strong>?</h5>
                                     
-                                    <div class="col-md-12">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                        <button type="submit" class="btn btn-primary">Modificar</button>
-                                    </div>
+                                    <form class="row g-3" action="editar.php" method="POST"> 
+                                        <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
 
-                                </form>
-                            </div>
+                                        <div class="col-md-6">
+                                            <label for="nombre" class="form-label">Nombre</label>
+                                            <input type="text" name="nombre" class="form-control" value="<?php echo $row['nombre']; ?>" required>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="apellido" class="form-label">Apellido</label>
+                                            <input type="text" name="apellido" class="form-control" value="<?php echo $row['apellido']; ?>" required>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="usuario" class="form-label">Nombre de usuario</label>
+                                            <input type="text" name="usuario" class="form-control" value="<?php echo $row['usuario']; ?>" required>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="correo" class="form-label">Correo</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                                <input type="email" name="correo" class="form-control" value="<?php echo $row['correo']; ?>" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="contrasena" class="form-label">Contraseña</label>
+                                            <input type="password" name="contrasena" class="form-control" value="<?php echo $row['contrasena']; ?>" required>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="telefono" class="form-label">Teléfono</label>
+                                            <input type="tel" name="telefono" class="form-control" required pattern="^\d+$" title="Solo se permiten Numeros" value="<?php echo $row['telefono']; ?>" required>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="genero" class="form-label">Género</label>
+                                            <div class="radio-container">
+                                                <div class="radio-item">
+                                                    <input id="masculino" type="radio" name="genero" value="Masculino" 
+                                                        <?php echo $row['genero'] === 'Masculino' ? 'checked' : ''; ?>>
+                                                    <label for="masculino">Masculino</label>
+                                                </div>
+                                                <div class="radio-item">
+                                                    <input id="femenino" type="radio" name="genero" value="Femenino" 
+                                                        <?php echo $row['genero'] === 'Femenino' ? 'checked' : ''; ?>>
+                                                    <label for="femenino">Femenino</label>
+                                                </div>
+                                                <div class="radio-item">
+                                                    <input id="nobinario" type="radio" name="genero" value="No binario" 
+                                                        <?php echo $row['genero'] === 'No binario' ? 'checked' : ''; ?>>
+                                                    <label for="nobinario">No binario</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="tipo_perfume" class="form-label">Tipo de perfume</label>
+                                            <select class="form-select" name="tipo_perfume" required>
+                                                <option value="Nicho" <?php echo $row['tipo_perfume'] === 'Nicho' ? 'selected' : ''; ?>>Nicho</option>
+                                                <option value="Diseñador" <?php echo $row['tipo_perfume'] === 'Diseñador' ? 'selected' : ''; ?>>Diseñador</option>
+                                                <option value="Árabe" <?php echo $row['tipo_perfume'] === 'Árabe' ? 'selected' : ''; ?>>Árabe</option>
+                                                <option value="Catálogo" <?php echo $row['tipo_perfume'] === 'Catálogo' ? 'selected' : ''; ?>>Catálogo</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary">Modificar</button>
+                                        </div>
+
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                    </th>
-<!--###############################################################################################################################-->
+                    </div>
+                </td>
 
-
-
-                    <!--BOTON DE ELIMINAR-->
-<!--###############################################################################################################################-->
-                    <th>
-                        <!-- Botón para abrir el modal -->
+                <!--BOTON DE ELIMINAR-->
+                <td>
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar<?php echo $row['id']; ?>">
                             Eliminar
                         </button>
 
-                        <!-- Modal para confirmar la eliminación -->
                         <div class="modal fade" id="modalEliminar<?php echo $row['id']; ?>" tabindex="-1" aria-labelledby="modalLabel<?php echo $row['id']; ?>" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -344,7 +360,6 @@
                                         <h5>¿Está seguro que desea eliminar al usuario con ID :<strong><?php echo $row['id']; ?></strong>?</h5>
                                     </div>
                                     <div class="modal-footer">
-                                        <!-- Formulario para enviar la ID al archivo eliminar.php -->
                                         <form action="eliminar.php" method="POST">
                                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -355,7 +370,7 @@
                                 </div>
                             </div>
                         </div>
-                    </th>
+                    </td>
                 </tr>
                 <?php 
                     }

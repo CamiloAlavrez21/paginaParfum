@@ -13,27 +13,65 @@
 <body>
     
 
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <a class="navbar-brand" href="#">Social de Parfum</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/HTML/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://127.0.0.1:5500/HTML/login.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
-                </li>
-            </ul>
-        </div>
+    <!--    Navegador   -->
     
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+                <a class="navbar-brand" href="#">Social de Parfum</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="http://localhost/pagina-personal/PHP/index.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Login -->
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Logeo de Cuenta</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container-flui">
+                                                <h3>!Inicia Secion para poder participar en nuestra comunidad!</h3>
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputEmail1" class="form-label">Usuario</label>
+                                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                                    </div>
+                                                    <button type="button" class="btn btn-primary">enviar</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">salir</button>
+                                            <a href="http://localhost/pagina-personal/PHP/registro.php"><button type="button" class="btn btn-primary">Crear Cuenta</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost/pagina-personal/PHP/panel_control.php">Panel de control</a>
+                        </li>
+                    </ul>
+                </div>
+
+        </nav>
     <!--baner-->
     
     <!--Formulario de registro-->
@@ -72,7 +110,7 @@
 
             <div class="col-md-6">
                 <label for="validationDefault05" class="form-label">Telefono</label>
-                <input type="tel"  name="telefono" class="form-control" required>
+                <input type="tel"  name="telefono" class="form-control" required pattern="^\d+$" title="Solo se permiten Numeros">
             </div>
 
             <div class="col-md-6">
