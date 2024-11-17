@@ -137,11 +137,11 @@ $con=conectarBaseDatos();
                                     <td><?php echo $row['genero']; ?></td>
                                     <td><?php echo $row['tipo_perfume']; ?></td>
                                     <td>
-                                        <!-- Botones de acción: Modificar y Eliminar -->
+                                        <!-- Botone Modificar -->
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2<?php echo $row['id']; ?>">
                                             Modificar
                                         </button>
-                                        <!-- Modal para modificar usuario -->
+                                        
                                         <div class="modal fade" id="modal2<?php echo $row['id']; ?>" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -152,7 +152,7 @@ $con=conectarBaseDatos();
                                                     <div class="modal-body">
                                                         <form class="row g-3" action="editar.php" method="POST">
                                                             
-                                                            <!-- Aquí van los campos del formulario para modificar -->
+                                                            
                                                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
 
                                                             <div class="col-md-6">
@@ -223,10 +223,7 @@ $con=conectarBaseDatos();
                                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                                                                 <button type="submit" class="btn btn-primary">Modificar</button>
                                                             </div>
-                                                            <!-- Otros campos... -->
-                                                            <div class="col-md-12">
-                                                                <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                                                            </div>
+                                                            
                                                         </form>
                                                     </div>
                                                 </div>
