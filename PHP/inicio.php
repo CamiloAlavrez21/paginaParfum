@@ -1,9 +1,3 @@
-<?php
-include("conexion.php");
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -26,7 +20,7 @@ include("conexion.php");
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/HTML/index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="http://localhost/pagina-personal/PHP/inicio.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <!-- Login -->
@@ -68,7 +62,7 @@ include("conexion.php");
                             <a class="nav-link" href="#">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Panel de control</a>
+                            <a class="nav-link" href="http://localhost/pagina-personal/PHP/panel_control.php">Panel de control</a>
                         </li>
                     </ul>
                 </div>

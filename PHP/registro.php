@@ -43,36 +43,36 @@
             <button type="button" class="btn btn-primary">Registro</button>
             <div class="col-md-6">
                 <label for="validationDefault01" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="validationDefault01" value="" required>
+                <input type="text" name="nombre" class="form-control"  value="" required>
             </div>
 
             <div class="col-md-6">
                 <label for="validationDefault02" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="validationDefault02" value="" required>
+                <input type="text" name="apellido" class="form-control" value="" required>
             </div>
 
             <div class="col-md-6">
                 <label for="validationDefault03" class="form-label">Nombre de usuario</label>
-                <input type="text" class="form-control" id="validationDefault03" value="" required>
+                <input type="text" name="usuario" class="form-control"  value="" required>
             </div>
 
             <div class="col-md-6">
                 <label for="validationDefaultUsername" class="form-label">Correo</label>
                 <div class="input-group">
                     <span class="input-group-text" id="inputGroupPrepend2">@</span>
-                    <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2"
+                    <input type="text" name="correo" class="form-control"  aria-describedby="inputGroupPrepend2"
                         required>
                 </div>
             </div>
 
             <div class="col-md-6">
                 <label for="validationDefault04" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="validationDefault04" required>
+                <input type="password" name="contrasena" class="form-control" id="validationDefault04" required>
             </div>
 
             <div class="col-md-6">
                 <label for="validationDefault05" class="form-label">Telefono</label>
-                <input type="tel" class="form-control" id="validationDefault05" required>
+                <input type="tel"  name="telefono" class="form-control" required>
             </div>
 
             <div class="col-md-6">
@@ -95,7 +95,7 @@
         
             <div class="col-md-6">
                 <label for="validationDefault07" class="form-label">Tipo de perfume</label>
-                <select class="form-select" id="validationDefault07" required>
+                <select class="form-select" name="tipo_perfume" id="validationDefault07" required>
                     <option selected disabled value=""></option>
                     <option>Nicho</option>
                     <option>Diseñador</option>
