@@ -76,39 +76,107 @@
                 </div>
 
         </nav>
-    
+    <div class="contenedorbaner">
+        <img src="../imagenes/parfum banner.jpeg" class="img-fluid" alt="..">
+    </div>
         <!--BOTON DE AGREGAR-->
 <!--###############################################################################################################################-->
-    <!-- BOTÓN DE ABRIR MODAL -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Agregar
-    </button>
+    <div class="container-boton">
+        <!-- BOTÓN DE ABRIR MODAL -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Agregar
+        </button>
 
-    <!-- MODAL -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar nuevo usuario</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- FORMULARIO -->
-                    <form action="insertar.php" method="POST">
-                        <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre" required>
-                        <input type="text" class="form-control mb-3" name="apellido" placeholder="Apellido" required>
-                        <input type="text" class="form-control mb-3" name="usuario" placeholder="Usuario" required>
-                        <input type="email" class="form-control mb-3" name="correo" placeholder="Correo" required>
-                        <input type="password" class="form-control mb-3" name="contrasena" placeholder="Contraseña" required>
-                        <input type="tel" class="form-control mb-3" name="telefono" placeholder="Teléfono" required>
-                        <input type="text" class="form-control mb-3" name="genero" placeholder="Género" required>
-                        <input type="text" class="form-control mb-3" name="tipo_perfume" placeholder="Tipo de Perfume" required>
+        <!-- MODAL -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar nuevo usuario</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- FORMULARIO -->
+                        <form class="row g-3" action="insertar.php" method="POST"> 
+                            <div class="col-md-6">
+                                <label for="validationDefault01" class="form-label">Nombre</label>
+                                <input type="text" name="nombre" class="form-control"  value="" required>
+                            </div>
 
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-primary">Enviar</button>
-                        </div>
-                    </form>
+                            <div class="col-md-6">
+                                <label for="validationDefault02" class="form-label">Apellido</label>
+                                <input type="text" name="apellido" class="form-control" value="" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="validationDefault03" class="form-label">Nombre de usuario</label>
+                                <input type="text" name="usuario" class="form-control"  value="" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="validationDefaultUsername" class="form-label">Correo</label>
+                                <div class="input-group">
+                                    <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                    <input type="text" name="correo" class="form-control"  aria-describedby="inputGroupPrepend2"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="validationDefault04" class="form-label">Contraseña</label>
+                                <input type="password" name="contrasena" class="form-control" id="validationDefault04" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="validationDefault05" class="form-label">Telefono</label>
+                                <input type="tel"  name="telefono" class="form-control" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="validationDefault06" class="form-label">Género</label>
+                                <div class="radio-container">
+                                    <div class="radio-item">
+                                        <input id="masculino" type="radio" name="genero" value="Masculino">
+                                        <label for="masculino">Masculino</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input id="femenino" type="radio" name="genero" value="Femenino">
+                                        <label for="femenino">Femenino</label>
+                                    </div>
+                                    <div class="radio-item">
+                                        <input id="nobinario" type="radio" name="genero" value="No binario">
+                                        <label for="nobinario">No binario</label>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-6">
+                                <label for="validationDefault07" class="form-label">Tipo de perfume</label>
+                                <select class="form-select" name="tipo_perfume" id="validationDefault07" required>
+                                    <option selected disabled value=""></option>
+                                    <option>Nicho</option>
+                                    <option>Diseñador</option>
+                                    <option>Árabe</option>
+                                    <option>Catálogo</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                        Acepto las Condiciones
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Agregar</button>
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -169,23 +237,84 @@
                             </div>
                             <div class="modal-body">
                                 <h5>¿Está seguro que desea modificar al usuario con ID :<strong><?php echo $row['id']; ?></strong>?</h5>
-                                <form action="editar.php" method="POST">
+                                
+                                <!-- FORMULARIO CORREGIDO -->
+                                <form class="row g-3" action="editar.php" method="POST"> 
+                                    <!-- Campo oculto para ID -->
                                     <input type="hidden" name="id" value="<?=$row['id'] ?>">
-                                    <input type="text" name="nombre" value="<?=$row['nombre'] ?>">
-                                    <input type="text" name="apellido" value="<?=$row['apellido'] ?>">
-                                    <input type="text" name="usuario" value="<?=$row['usuario'] ?>">
-                                    <input type="text" name="correo" value="<?=$row['correo'] ?>">
-                                    <input type="text" name="contrasena" value="<?=$row['contrasena'] ?>">
-                                    <input type="text" name="telefono" value="<?=$row['telefono'] ?>">
-                                    <input type="text" name="genero" value="<?=$row['genero'] ?>">
-                                    <input type="text" name="tipo_perfume" value="<?=$row['tipo_perfume'] ?>">
 
-                                    <input type="submit" value="enviar">
+                                    <div class="col-md-6">
+                                        <label for="validationDefault01" class="form-label">Nombre</label>
+                                        <input type="text" name="nombre" class="form-control" value="<?=$row['nombre'] ?>" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="validationDefault02" class="form-label">Apellido</label>
+                                        <input type="text" name="apellido" class="form-control" value="<?=$row['apellido'] ?>" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="validationDefault03" class="form-label">Nombre de usuario</label>
+                                        <input type="text" name="usuario" class="form-control" value="<?=$row['usuario'] ?>" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="validationDefaultUsername" class="form-label">Correo</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                                            <input type="text" name="correo" class="form-control" value="<?=$row['correo'] ?>" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="validationDefault04" class="form-label">Contraseña</label>
+                                        <input type="password" name="contrasena" class="form-control" value="<?=$row['contrasena'] ?>" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="validationDefault05" class="form-label">Teléfono</label>
+                                        <input type="tel" name="telefono" class="form-control" value="<?=$row['telefono'] ?>" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="validationDefault06" class="form-label">Género</label>
+                                        <div class="radio-container">
+                                            <div class="radio-item">
+                                                <input id="masculino" type="radio" name="genero" value="Masculino" 
+                                                    <?= $row['genero'] === 'Masculino' ? 'checked' : '' ?>>
+                                                <label for="masculino">Masculino</label>
+                                            </div>
+                                            <div class="radio-item">
+                                                <input id="femenino" type="radio" name="genero" value="Femenino" 
+                                                    <?= $row['genero'] === 'Femenino' ? 'checked' : '' ?>>
+                                                <label for="femenino">Femenino</label>
+                                            </div>
+                                            <div class="radio-item">
+                                                <input id="nobinario" type="radio" name="genero" value="No binario" 
+                                                    <?= $row['genero'] === 'No binario' ? 'checked' : '' ?>>
+                                                <label for="nobinario">No binario</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="validationDefault07" class="form-label">Tipo de perfume</label>
+                                        <select class="form-select" name="tipo_perfume" id="validationDefault07" required>
+                                            <option disabled>Seleccionar...</option>
+                                            <option value="Nicho" <?= $row['tipo_perfume'] === 'Nicho' ? 'selected' : '' ?>>Nicho</option>
+                                            <option value="Diseñador" <?= $row['tipo_perfume'] === 'Diseñador' ? 'selected' : '' ?>>Diseñador</option>
+                                            <option value="Árabe" <?= $row['tipo_perfume'] === 'Árabe' ? 'selected' : '' ?>>Árabe</option>
+                                            <option value="Catálogo" <?= $row['tipo_perfume'] === 'Catálogo' ? 'selected' : '' ?>>Catálogo</option>
+                                        </select>
+                                    </div>
+
+                                    
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="submit" class="btn btn-primary">Modificar</button>
+                                    </div>
+
                                 </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="submit" class="btn btn-primary">Enviar</button>
                             </div>
                             </div>
                         </div>
@@ -233,6 +362,38 @@
                 ?>
             </tbody>
         </table>
+    </div>
+
+    <!--Footer-->
+    <div class="grid-container3">
+        <footer>
+            <div class="footer-texto">
+                <div>
+                    <h3>Terminos</h3>
+                    <p>Política de privacidad</p>
+                    <p>Termino y Condiciones</p>
+                    <p>Etica de la sociedad</p>
+                </div>
+                <div>
+                    <h3>Influencers</h3>
+                    <p>Mr.ross</p>
+                    <p>El Güey de los Perfumes</p>
+                    <p>Luisito Comunica</p>
+                </div>
+                <div>
+                    <h3>Perfumerias</h3>
+                    <p>Elite Perfumes</p>
+                    <p>Alisha Perfumes</p>
+                    <p>Skills Perfumes</p>
+                </div>
+                <div class="redes-sociales">
+                    <h3>Redes sociales</h3>
+                    <a href="#"><img src="../imagenes/whatsapp.svg" alt="WhatsApp"></a>
+                    <a href="#"><img src="../imagenes/instagram.svg" alt="Facebook"></a>
+                    <a href="#"><img src="../imagenes/facebook.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </footer>
     </div>
     
 

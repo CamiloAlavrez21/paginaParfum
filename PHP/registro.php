@@ -39,7 +39,7 @@
     <!--Formulario de registro-->
     <div class="container">
         
-        <form class="row g-3" action="insertar.php" method="POST"> 
+        <form class="row g-3" action="insertar2.php" method="POST"> 
             <button type="button" class="btn btn-primary">Registro</button>
             <div class="col-md-6">
                 <label for="validationDefault01" class="form-label">Nombre</label>

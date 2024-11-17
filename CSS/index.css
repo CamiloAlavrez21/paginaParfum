@@ -44,6 +44,10 @@ body{
     border-radius: 30px;
 }
 
+.container-boton{
+    padding-top: 20px;
+}
+
 /*  section  1 */
 section{
     background-color:#CAB7FF ;
