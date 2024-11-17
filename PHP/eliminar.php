@@ -1,17 +1,16 @@
 <?php
 
 include("conexion.php");
-$con=conectarbd();
+$con=conectarBaseDatos();
 
 $id=$_GET['id'];
 
-$sql="DELETE FROM clientes  WHERE id='$id'";
+$sql="DELETE FROM usuarios  WHERE id='$id'";
 $query=mysqli_query($con,$sql);
 
-    if($query){
-        Header("Location: panel_control.php");
-    }
+if($query){
+   Header("Location: panel_control.php");
+}
 ?>
 
-<?php
 

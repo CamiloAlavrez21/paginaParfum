@@ -1,9 +1,8 @@
 <?php
-
 include("conexion.php");
 $con=conectarBaseDatos();
 
-$id=null;
+$id=$_POST['id'];
 $nombre=$_POST['nombre'];
 $apellido=$_POST['apellido'];
 $usuario=$_POST['usuario'];
@@ -13,9 +12,8 @@ $telefono=$_POST['telefono'];
 $genero=$_POST['genero'];
 $tipo_perfume=$_POST['tipo_perfume'];
 
-$sql="INSERT INTO usuarios VALUES('$id','$nombre','$apellido','$usuario','$correo','$contrasena','$telefono','$genero','$tipo_perfume')";
-$query= mysqli_query($con,$sql);
-
+$sql="UPDATE usuarios SET nombre='$nombre',apellido='$apellido',usuario='$usuario',correo='$correo',contrasena='$contrasena',telefono='$telefono',genero='$genero',tipo_perfume='$tipo_perfume' WHERE id='$id'";
+$query=mysqli_query($con,$sql);
 
 if($query){
     Header("Location:panel_control.php");

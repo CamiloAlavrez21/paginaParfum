@@ -1,9 +1,6 @@
 <?php
-include("conexion.php");
-
+    include("conexion.php");
 ?>
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -37,11 +34,12 @@ include("conexion.php");
         </div>
     
     </nav>
-
+    <!--baner-->
+    
     <!--Formulario de registro-->
     <div class="container">
         
-        <form action="insertar.php" class="row g-3"> 
+        <form class="row g-3" action="insertar.php" method="POST"> 
             <button type="button" class="btn btn-primary">Registro</button>
             <div class="col-md-6">
                 <label for="validationDefault01" class="form-label">Nombre</label>
@@ -77,7 +75,7 @@ include("conexion.php");
                 <input type="tel" class="form-control" id="validationDefault05" required>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <label for="validationDefault06" class="form-label">Género</label>
                 <div class="radio-container">
                     <div class="radio-item">
@@ -94,8 +92,8 @@ include("conexion.php");
                     </div>
                 </div>
             </div>
-            
-            <div class="col-md-4">
+        
+            <div class="col-md-6">
                 <label for="validationDefault07" class="form-label">Tipo de perfume</label>
                 <select class="form-select" id="validationDefault07" required>
                     <option selected disabled value=""></option>
@@ -105,29 +103,6 @@ include("conexion.php");
                     <option>Catálogo</option>
                 </select>
             </div>
-            
-            <div class="col-md-4">
-                <label for="validationDefault08" class="form-label">Preferencia de Perfume</label>
-                <div class="checkbox-container">
-                    <div class="checkbox-item">
-                        <input id="fresco" type="checkbox" name="frescos">
-                        <label for="fresco">Fresco</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input id="fiestas" type="checkbox" name="para fiestas">
-                        <label for="fiestas">Para fiestas</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input id="citas" type="checkbox" name="para citas">
-                        <label for="citas">Para citas</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input id="elegantes" type="checkbox" name="elegantes">
-                        <label for="elegantes">Elegantes</label>
-                    </div>
-                </div>
-            </div>
-
 
             <div class="col-12">
                 <div class="form-check">

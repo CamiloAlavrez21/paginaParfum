@@ -1,15 +1,16 @@
 <?php
-function conectarbd(){
+
+function conectarBaseDatos(){
     $host="localhost";
     $user="root";
     $pass="";
 
-    $bd="intento1";
+    $bd="socialparfum";
 
-    $con=mysqli_connect($host,$user,$pass);
+    $connect = mysqli_connect($host,$user,$pass);
 
-    mysqli_select_db($con,$bd);
+    mysqli_select_db($connect, $bd);
 
-    return $con;
+    return $connect;
 }
 ?>
