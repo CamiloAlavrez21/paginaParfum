@@ -9,6 +9,14 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+
+    <!--Alerta Login-->
+    <?php if (isset($_GET['success']) && $_GET['success'] == 5 ): ?>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+          Secion iniciada exitosa.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <?php endif; ?>
     <!--    Navegador   -->
     
     <nav class="navbar navbar-expand-lg navbar-custom">
@@ -37,16 +45,16 @@
                                         <div class="modal-body">
                                             <div class="container-flui">
                                                 <h3>!Inicia Secion para poder participar en nuestra comunidad!</h3>
-                                                <form>
+                                                <form action="logeo.php" method="POST">
                                                     <div class="mb-3">
                                                         <label for="exampleInputEmail1" class="form-label">Usuario</label>
-                                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        <input type="text" class="form-control" id="usuario" name="usuario" required>
                                                     </div>
                                                     <div class="mb-3">
                                                         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                                        <input type="password" class="form-control" id="exampleInputPassword1" name="contrasena" required>
                                                     </div>
-                                                    <button type="button" class="btn btn-primary">enviar</button>
+                                                    <button type="submit" class="btn btn-primary">enviar</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -63,6 +71,16 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="http://localhost/pagina-personal/PHP/panel_control.php">Panel de control</a>
+                        </li>
+                        <li>
+                            <?php 
+                                if (isset($_SESSION["usuario"])){
+                                    echo $_SESSION['usuario'];
+                                }
+                                else{
+                                    echo "No hay una sesion iniciada";
+                                }
+                            ?>
                         </li>
                     </ul>
                 </div>
