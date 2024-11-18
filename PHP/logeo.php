@@ -3,6 +3,7 @@
 include("conexion.php");
 $con=conectarBaseDatos();
 session_start();
+
 if (!empty($_POST)){
     $usuario = mysqli_real_escape_string($con,$_POST['usuario']);
     $contrasena = mysqli_real_escape_string($con,$_POST['contrasena']);

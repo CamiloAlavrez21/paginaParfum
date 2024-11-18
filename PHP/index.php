@@ -1,3 +1,10 @@
+<?php 
+    include("conexion.php");
+    $con=conectarBaseDatos();
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,7 +20,7 @@
     <!--Alerta Login-->
     <?php if (isset($_GET['success']) && $_GET['success'] == 5 ): ?>
       <div class="alert alert-success alert-dismissible fade show" role="alert">
-          Secion iniciada exitosa.
+          Sesion iniciada exitosa leo10.
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       <?php endif; ?>
@@ -73,14 +80,12 @@
                             <a class="nav-link" href="http://localhost/pagina-personal/PHP/panel_control.php">Panel de control</a>
                         </li>
                         <li>
-                            <?php 
-                                if (isset($_SESSION["usuario"])){
-                                    echo $_SESSION['usuario'];
-                                }
-                                else{
-                                    echo "No hay una sesion iniciada";
-                                }
-                            ?>
+                        <?php if (isset($_GET['success']) && $_GET['success'] == 5 ): ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                             leo10.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <?php endif; ?>
                         </li>
                     </ul>
                 </div>
