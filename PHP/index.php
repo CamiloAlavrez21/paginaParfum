@@ -2,7 +2,6 @@
     include("conexion.php");
     $con=conectarBaseDatos();
     session_start();
-    $usuario="usuario"
 ?>
 
 
@@ -60,7 +59,7 @@
                                             <div class="container-flui">
                                                 <h3>!Inicia Secion para poder participar en nuestra comunidad!</h3>
                                                 <form action="logeo.php" method="POST">
-                                                    <div class="mb-3" id="">
+                                                    <div class="mb-3" id="<?php echo $row['usuario']; ?>">
                                                         <label for="exampleInputEmail1" class="form-label">Usuario</label>
                                                         <input type="text" class="form-control" id="usuario" name="usuario" required>
                                                     </div>
@@ -89,11 +88,10 @@
                         </li>
                         <li>
                             <?php 
-                                if (isset($_SESSION["usuario"])){
-                                    echo $_SESSION['usuario'];
-                                }
-                                else{
-                                    echo "No hay una sesion iniciada";
+                                if (isset($_SESSION["usuario"])) {
+                                    echo "Bienvenido, " . $_SESSION['usuario'];
+                                } else {
+                                    echo "No hay una sesión iniciada";
                                 }
                             ?>
                         </li>
