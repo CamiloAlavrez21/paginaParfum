@@ -20,7 +20,7 @@
     <!--Alerta Login-->
     <?php if (isset($_GET['success']) && $_GET['success'] == 5 ): ?>
       <div class="alert alert-success alert-dismissible fade show" role="alert">
-          Sesion iniciada exitosa leo10.
+          Sesion iniciada exitosa.
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       <?php endif; ?>
@@ -61,6 +61,7 @@
                                                         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
                                                         <input type="password" class="form-control" id="exampleInputPassword1" name="contrasena" required>
                                                     </div>
+                                                    <a href="">¿Ha olvidado su contraseña?</a>
                                                     <button type="submit" class="btn btn-primary">enviar</button>
                                                 </form>
                                             </div>
@@ -80,12 +81,14 @@
                             <a class="nav-link" href="http://localhost/pagina-personal/PHP/panel_control.php">Panel de control</a>
                         </li>
                         <li>
-                        <?php if (isset($_GET['success']) && $_GET['success'] == 5 ): ?>
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                             leo10.
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                        <?php endif; ?>
+                            <?php 
+                                if (isset($_SESSION["usuario"])){
+                                    echo $_SESSION['usuario'];
+                                }
+                                else{
+                                    echo "No hay una sesion iniciada";
+                                }
+                            ?>
                         </li>
                     </ul>
                 </div>

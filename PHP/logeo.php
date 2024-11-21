@@ -13,7 +13,7 @@ if (!empty($_POST)){
     $rows=$resultado->num_rows;
     if($rows > 0){
         $row = $resultado->fetch_assoc;
-        $_SESSION['id_usuario']=$row["idusuario"];
+        $_SESSION['usuario']=$row["usuario"];
         header("Location:index.php?success=5");
         exit;
     }else {
