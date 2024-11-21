@@ -2,6 +2,7 @@
     include("conexion.php");
     $con=conectarBaseDatos();
     session_start();
+    $usuario="usuario"
 ?>
 
 
@@ -21,6 +22,12 @@
     <?php if (isset($_GET['success']) && $_GET['success'] == 5 ): ?>
       <div class="alert alert-success alert-dismissible fade show" role="alert">
           Sesion iniciada exitosa.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <?php endif; ?>
+      <?php if (isset($_GET['success']) && $_GET['success'] == 6 ): ?>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+          Modificacion de contraseña exitosa.
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       <?php endif; ?>
@@ -53,7 +60,7 @@
                                             <div class="container-flui">
                                                 <h3>!Inicia Secion para poder participar en nuestra comunidad!</h3>
                                                 <form action="logeo.php" method="POST">
-                                                    <div class="mb-3">
+                                                    <div class="mb-3" id="">
                                                         <label for="exampleInputEmail1" class="form-label">Usuario</label>
                                                         <input type="text" class="form-control" id="usuario" name="usuario" required>
                                                     </div>
@@ -61,7 +68,7 @@
                                                         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
                                                         <input type="password" class="form-control" id="exampleInputPassword1" name="contrasena" required>
                                                     </div>
-                                                    <a href="">¿Ha olvidado su contraseña?</a>
+                                                    <a href="http://localhost/pagina-personal/PHP/recuperar.php">¿Ha olvidado su contraseña?</a>
                                                     <button type="submit" class="btn btn-primary">enviar</button>
                                                 </form>
                                             </div>

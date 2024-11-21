@@ -3,11 +3,11 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/recuperar.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Recuperar</title>
@@ -77,8 +77,25 @@
     <div class="contenedorbaner">
         <img src="../imagenes/PANEL DE CONTROL.png" class="img-fluid" alt="..">
     </div>
+    <div class="container-4">
+        <form action="contrasena.php" method="POST">
+            <div class="col-md-12" id="<?php echo $row['id']; ?>">
+                <label for="validationDefault01" class="form-label">Usuario</label>
+                <input type="text" name="usuario" class="form-control" required>
+            </div>
 
+            <div class="col-md-12">
+                <label for="validationDefault02" class="form-label">Nueva Contraseña</label>
+                <input type="password" name="contrasena" class="form-control" required>
+            </div>
     
+            <div class="col-md-12">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

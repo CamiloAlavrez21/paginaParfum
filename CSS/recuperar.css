@@ -1,0 +1,132 @@
+body{
+    background-color:#F5F0E6 !important;
+    padding: 20px;
+    font-family: 'Playfair Display', serif !important;
+}
+
+.container-fluid{
+    border-radius: 10px;
+    border: 4px solid #8B867C;
+    margin-top: 30px;
+}
+
+.navbar{
+    border: 5px solid #8B867C;
+    border-radius: 20px;
+    
+}
+.navbar a{
+    padding-left: 20px;
+    font-size: 22px;
+}
+.navbar-custom {
+    background-color: #CAB7FF;
+    border: 5px solid #8B867C;
+    border-radius: 20px;
+}
+/*  Modal   */
+.modal-body{
+    background-color: #D7C8E8;
+}
+.modal-header {
+    background-color: #D7C8E8;
+}
+
+.btn-primary {
+    background-color: #6a0dad !important;
+    border-color: #6a0dad !important;
+}
+
+/*  banner   */
+.img-fluid{
+    border: 5px solid gold;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+
+.container-boton{
+    padding-top: 20px;
+}
+/*Recuperar contraseña*/
+.container-4{
+    margin-top: 30px;
+    margin-left: 400px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    border: 4px solid #5A4E43;
+    width: 50%;
+    height: 50%;
+    background-color: #D7C8E8;
+}
+.container-4 form{
+    padding: 50px;
+    background-color: #D7C8E8;
+}
+.container-4 .btn-primary{
+    margin-top: 20px;
+}
+.container-4 .btn-secondary{
+    margin-top: 20px;
+}
+
+
+
+/*Footer*/
+.grid-container3 {
+    width: 100%;
+    background-color: #F4E1D2;
+    border: 5px solid #8B867C;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+footer {
+    border-radius: 20px;
+    background-color: #D7C8E8;
+    padding: 20px;
+
+}
+
+.footer-texto {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-texto div {
+    text-align: center;
+}
+
+.footer-texto p {
+    color:#5A4E43;
+    text-decoration: none;
+}
+
+.redes-sociales img {
+    width: 30px;
+    padding-top: 5px;
+    transition: transform 0.5s ease;
+}
+.redes-sociales img:hover{
+    transform: rotate(360deg);
+}
+
+.redes-sociales a{
+    display: flex;
+    justify-content: center;
+}
+
+.grid-container4 {
+    width: 100%;
+    background-color: #CAB7FF;
+    border: 5px solid #8B867C;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.footer-copy {
+    text-align: center;
+    padding-top: 15px;
+    color: black;
+}
+
